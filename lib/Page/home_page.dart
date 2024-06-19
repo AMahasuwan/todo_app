@@ -13,17 +13,65 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(widget.title),
+        body: Column(
+      children: [
+        // Header
+        Row(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                // To add fuction
+              },
+              child: Icon(Icons.menu),
+              style: ElevatedButton.styleFrom(shape: CircleBorder()),
+            ),
+            SizedBox(
+              width: 55,
+            ),
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Container(
+                  color: Colors.blueGrey,
+                  margin: EdgeInsets.all(5),
+                  child: Text(
+                    "container1",
+                  ) // Container1,
+                  ),
+            ),
+          ],
         ),
-        body: Padding(
-          padding: EdgeInsets.all(20),
-          child: Container(
-            margin: EdgeInsets.all(5),
-            child: Text("hello, container"),
-          ),
-        ) // This trailing comma makes auto-formatting nicer for build methods.
+        // Search bar
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Container(child: Text("container2")),
+            )
+          ],
+        ),
+        // Detail
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(30),
+              child: Container(child: Text("container3")),
+            )
+          ],
+        ),
+        // Button
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Container(child: Text("container4")),
+            )
+          ],
+        ),
+      ],
+    ) // This trailing comma makes auto-formatting nicer for build methods.
         );
   }
 }
